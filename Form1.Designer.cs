@@ -1,0 +1,733 @@
+﻿namespace ShoppingOnlineApp
+{
+    partial class Shop
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.LNButton = new System.Windows.Forms.Button();
+            this.KNSButton = new System.Windows.Forms.Button();
+            this.TTButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.title1 = new System.Windows.Forms.Label();
+            this.title2 = new System.Windows.Forms.Label();
+            this.title4 = new System.Windows.Forms.Label();
+            this.title3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.title6 = new System.Windows.Forms.Label();
+            this.title5 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.title8 = new System.Windows.Forms.Label();
+            this.title7 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.title10 = new System.Windows.Forms.Label();
+            this.title9 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.title12 = new System.Windows.Forms.Label();
+            this.title11 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.title14 = new System.Windows.Forms.Label();
+            this.title13 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.title16 = new System.Windows.Forms.Label();
+            this.title15 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.title18 = new System.Windows.Forms.Label();
+            this.title17 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.title20 = new System.Windows.Forms.Label();
+            this.title19 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.ItemDisplayPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BuyButton = new System.Windows.Forms.Button();
+            this.SoLuongSanPham = new System.Windows.Forms.NumericUpDown();
+            this.DescriptionBox = new System.Windows.Forms.TextBox();
+            this.ItemPriceLabel = new System.Windows.Forms.Label();
+            this.ItemNameLabel = new System.Windows.Forms.Label();
+            this.ItemDisplayPictureBox = new System.Windows.Forms.PictureBox();
+            this.ItemReturnButton = new System.Windows.Forms.Button();
+            this.ShoppingCartButton = new System.Windows.Forms.Button();
+            this.MoneyFinishButton = new System.Windows.Forms.Button();
+            this.CartPanel = new System.Windows.Forms.Panel();
+            this.CartExitButton = new System.Windows.Forms.Button();
+            this.HomeButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.ItemDisplayPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SoLuongSanPham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemDisplayPictureBox)).BeginInit();
+            this.CartPanel.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // LNButton
+            // 
+            this.LNButton.Location = new System.Drawing.Point(1, 179);
+            this.LNButton.Name = "LNButton";
+            this.LNButton.Size = new System.Drawing.Size(273, 134);
+            this.LNButton.TabIndex = 0;
+            this.LNButton.Text = "Light Novel";
+            this.LNButton.UseVisualStyleBackColor = true;
+            this.LNButton.Click += new System.EventHandler(this.LNbutton_Click);
+            // 
+            // KNSButton
+            // 
+            this.KNSButton.Location = new System.Drawing.Point(1, 309);
+            this.KNSButton.Name = "KNSButton";
+            this.KNSButton.Size = new System.Drawing.Size(273, 135);
+            this.KNSButton.TabIndex = 1;
+            this.KNSButton.Text = "Kĩ năng sống";
+            this.KNSButton.UseVisualStyleBackColor = true;
+            this.KNSButton.Click += new System.EventHandler(this.KNSButton_Click);
+            // 
+            // TTButton
+            // 
+            this.TTButton.Location = new System.Drawing.Point(1, 441);
+            this.TTButton.Name = "TTButton";
+            this.TTButton.Size = new System.Drawing.Size(273, 131);
+            this.TTButton.TabIndex = 2;
+            this.TTButton.Text = "Truyện tranh";
+            this.TTButton.UseVisualStyleBackColor = true;
+            this.TTButton.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(337, 192);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(134, 169);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // title1
+            // 
+            this.title1.AutoSize = true;
+            this.title1.Location = new System.Drawing.Point(326, 374);
+            this.title1.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title1.Name = "title1";
+            this.title1.Size = new System.Drawing.Size(160, 25);
+            this.title1.TabIndex = 0;
+            this.title1.Text = "label1";
+            this.title1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.title1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // title2
+            // 
+            this.title2.AutoSize = true;
+            this.title2.Location = new System.Drawing.Point(326, 408);
+            this.title2.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title2.Name = "title2";
+            this.title2.Size = new System.Drawing.Size(160, 25);
+            this.title2.TabIndex = 0;
+            this.title2.Text = "label2";
+            this.title2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // title4
+            // 
+            this.title4.AutoSize = true;
+            this.title4.Location = new System.Drawing.Point(532, 408);
+            this.title4.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title4.Name = "title4";
+            this.title4.Size = new System.Drawing.Size(160, 25);
+            this.title4.TabIndex = 4;
+            this.title4.Text = "label3";
+            this.title4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // title3
+            // 
+            this.title3.AutoSize = true;
+            this.title3.Location = new System.Drawing.Point(532, 374);
+            this.title3.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title3.Name = "title3";
+            this.title3.Size = new System.Drawing.Size(160, 25);
+            this.title3.TabIndex = 5;
+            this.title3.Text = "label4";
+            this.title3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(545, 192);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(134, 169);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // title6
+            // 
+            this.title6.AutoSize = true;
+            this.title6.Location = new System.Drawing.Point(730, 408);
+            this.title6.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title6.Name = "title6";
+            this.title6.Size = new System.Drawing.Size(160, 25);
+            this.title6.TabIndex = 7;
+            this.title6.Text = "label5";
+            this.title6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // title5
+            // 
+            this.title5.AutoSize = true;
+            this.title5.Location = new System.Drawing.Point(730, 374);
+            this.title5.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title5.Name = "title5";
+            this.title5.Size = new System.Drawing.Size(160, 25);
+            this.title5.TabIndex = 8;
+            this.title5.Text = "label6";
+            this.title5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(744, 192);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(134, 169);
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // title8
+            // 
+            this.title8.AutoSize = true;
+            this.title8.Location = new System.Drawing.Point(923, 408);
+            this.title8.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title8.Name = "title8";
+            this.title8.Size = new System.Drawing.Size(160, 25);
+            this.title8.TabIndex = 10;
+            this.title8.Text = "label7";
+            this.title8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // title7
+            // 
+            this.title7.AutoSize = true;
+            this.title7.Location = new System.Drawing.Point(923, 374);
+            this.title7.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title7.Name = "title7";
+            this.title7.Size = new System.Drawing.Size(160, 25);
+            this.title7.TabIndex = 11;
+            this.title7.Text = "label8";
+            this.title7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(935, 192);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(134, 169);
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // title10
+            // 
+            this.title10.AutoSize = true;
+            this.title10.Location = new System.Drawing.Point(1119, 408);
+            this.title10.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title10.Name = "title10";
+            this.title10.Size = new System.Drawing.Size(160, 25);
+            this.title10.TabIndex = 13;
+            this.title10.Text = "label9";
+            this.title10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // title9
+            // 
+            this.title9.AutoSize = true;
+            this.title9.Location = new System.Drawing.Point(1119, 374);
+            this.title9.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title9.Name = "title9";
+            this.title9.Size = new System.Drawing.Size(160, 25);
+            this.title9.TabIndex = 14;
+            this.title9.Text = "label10";
+            this.title9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(1130, 192);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(134, 169);
+            this.pictureBox5.TabIndex = 15;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // title12
+            // 
+            this.title12.AutoSize = true;
+            this.title12.Location = new System.Drawing.Point(326, 669);
+            this.title12.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title12.Name = "title12";
+            this.title12.Size = new System.Drawing.Size(160, 25);
+            this.title12.TabIndex = 16;
+            this.title12.Text = "label11";
+            this.title12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // title11
+            // 
+            this.title11.AutoSize = true;
+            this.title11.Location = new System.Drawing.Point(326, 635);
+            this.title11.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title11.Name = "title11";
+            this.title11.Size = new System.Drawing.Size(160, 25);
+            this.title11.TabIndex = 17;
+            this.title11.Text = "label12";
+            this.title11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(337, 453);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(134, 169);
+            this.pictureBox6.TabIndex = 18;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // title14
+            // 
+            this.title14.AutoSize = true;
+            this.title14.Location = new System.Drawing.Point(532, 669);
+            this.title14.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title14.Name = "title14";
+            this.title14.Size = new System.Drawing.Size(160, 25);
+            this.title14.TabIndex = 19;
+            this.title14.Text = "label13";
+            this.title14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // title13
+            // 
+            this.title13.AutoSize = true;
+            this.title13.Location = new System.Drawing.Point(532, 635);
+            this.title13.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title13.Name = "title13";
+            this.title13.Size = new System.Drawing.Size(160, 25);
+            this.title13.TabIndex = 20;
+            this.title13.Text = "label14";
+            this.title13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(545, 453);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(134, 169);
+            this.pictureBox7.TabIndex = 21;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // title16
+            // 
+            this.title16.AutoSize = true;
+            this.title16.Location = new System.Drawing.Point(730, 669);
+            this.title16.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title16.Name = "title16";
+            this.title16.Size = new System.Drawing.Size(160, 25);
+            this.title16.TabIndex = 22;
+            this.title16.Text = "label15";
+            this.title16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // title15
+            // 
+            this.title15.AutoSize = true;
+            this.title15.Location = new System.Drawing.Point(730, 635);
+            this.title15.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title15.Name = "title15";
+            this.title15.Size = new System.Drawing.Size(160, 25);
+            this.title15.TabIndex = 23;
+            this.title15.Text = "label16";
+            this.title15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(744, 453);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(134, 169);
+            this.pictureBox8.TabIndex = 24;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
+            // title18
+            // 
+            this.title18.AutoSize = true;
+            this.title18.Location = new System.Drawing.Point(923, 669);
+            this.title18.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title18.Name = "title18";
+            this.title18.Size = new System.Drawing.Size(160, 25);
+            this.title18.TabIndex = 25;
+            this.title18.Text = "label17";
+            this.title18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // title17
+            // 
+            this.title17.AutoSize = true;
+            this.title17.Location = new System.Drawing.Point(923, 635);
+            this.title17.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title17.Name = "title17";
+            this.title17.Size = new System.Drawing.Size(160, 25);
+            this.title17.TabIndex = 26;
+            this.title17.Text = "label18";
+            this.title17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(935, 453);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(134, 169);
+            this.pictureBox9.TabIndex = 27;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // title20
+            // 
+            this.title20.AutoSize = true;
+            this.title20.Location = new System.Drawing.Point(1119, 669);
+            this.title20.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title20.Name = "title20";
+            this.title20.Size = new System.Drawing.Size(160, 25);
+            this.title20.TabIndex = 28;
+            this.title20.Text = "label19";
+            this.title20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // title19
+            // 
+            this.title19.AutoSize = true;
+            this.title19.Location = new System.Drawing.Point(1119, 635);
+            this.title19.MinimumSize = new System.Drawing.Size(160, 20);
+            this.title19.Name = "title19";
+            this.title19.Size = new System.Drawing.Size(160, 25);
+            this.title19.TabIndex = 29;
+            this.title19.Text = "label20";
+            this.title19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(1130, 453);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(134, 169);
+            this.pictureBox10.TabIndex = 30;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
+            // ItemDisplayPanel
+            // 
+            this.ItemDisplayPanel.BackColor = System.Drawing.Color.White;
+            this.ItemDisplayPanel.Controls.Add(this.label1);
+            this.ItemDisplayPanel.Controls.Add(this.BuyButton);
+            this.ItemDisplayPanel.Controls.Add(this.SoLuongSanPham);
+            this.ItemDisplayPanel.Controls.Add(this.DescriptionBox);
+            this.ItemDisplayPanel.Controls.Add(this.ItemPriceLabel);
+            this.ItemDisplayPanel.Controls.Add(this.ItemNameLabel);
+            this.ItemDisplayPanel.Controls.Add(this.ItemDisplayPictureBox);
+            this.ItemDisplayPanel.Controls.Add(this.ItemReturnButton);
+            this.ItemDisplayPanel.Location = new System.Drawing.Point(0, 180);
+            this.ItemDisplayPanel.Name = "ItemDisplayPanel";
+            this.ItemDisplayPanel.Size = new System.Drawing.Size(1371, 522);
+            this.ItemDisplayPanel.TabIndex = 31;
+            this.ItemDisplayPanel.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(667, 473);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 25);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Số lượng: ";
+            // 
+            // BuyButton
+            // 
+            this.BuyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BuyButton.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BuyButton.ForeColor = System.Drawing.Color.Red;
+            this.BuyButton.Location = new System.Drawing.Point(1049, 471);
+            this.BuyButton.Name = "BuyButton";
+            this.BuyButton.Size = new System.Drawing.Size(197, 34);
+            this.BuyButton.TabIndex = 6;
+            this.BuyButton.Text = "Thêm vào giỏ hàng";
+            this.BuyButton.UseVisualStyleBackColor = false;
+            this.BuyButton.Click += new System.EventHandler(this.BuyButton_Click);
+            // 
+            // SoLuongSanPham
+            // 
+            this.SoLuongSanPham.Location = new System.Drawing.Point(785, 471);
+            this.SoLuongSanPham.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.SoLuongSanPham.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.SoLuongSanPham.Name = "SoLuongSanPham";
+            this.SoLuongSanPham.Size = new System.Drawing.Size(180, 31);
+            this.SoLuongSanPham.TabIndex = 5;
+            this.SoLuongSanPham.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SoLuongSanPham.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // DescriptionBox
+            // 
+            this.DescriptionBox.Location = new System.Drawing.Point(619, 209);
+            this.DescriptionBox.Multiline = true;
+            this.DescriptionBox.Name = "DescriptionBox";
+            this.DescriptionBox.ReadOnly = true;
+            this.DescriptionBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.DescriptionBox.Size = new System.Drawing.Size(738, 243);
+            this.DescriptionBox.TabIndex = 4;
+            // 
+            // ItemPriceLabel
+            // 
+            this.ItemPriceLabel.AutoSize = true;
+            this.ItemPriceLabel.Font = new System.Drawing.Font("Trebuchet MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ItemPriceLabel.ForeColor = System.Drawing.Color.Red;
+            this.ItemPriceLabel.Location = new System.Drawing.Point(237, 471);
+            this.ItemPriceLabel.Name = "ItemPriceLabel";
+            this.ItemPriceLabel.Size = new System.Drawing.Size(0, 40);
+            this.ItemPriceLabel.TabIndex = 3;
+            // 
+            // ItemNameLabel
+            // 
+            this.ItemNameLabel.AutoSize = true;
+            this.ItemNameLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ItemNameLabel.ForeColor = System.Drawing.Color.Black;
+            this.ItemNameLabel.Location = new System.Drawing.Point(619, 36);
+            this.ItemNameLabel.MinimumSize = new System.Drawing.Size(700, 50);
+            this.ItemNameLabel.Name = "ItemNameLabel";
+            this.ItemNameLabel.Size = new System.Drawing.Size(700, 50);
+            this.ItemNameLabel.TabIndex = 2;
+            // 
+            // ItemDisplayPictureBox
+            // 
+            this.ItemDisplayPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ItemDisplayPictureBox.Location = new System.Drawing.Point(119, 36);
+            this.ItemDisplayPictureBox.Name = "ItemDisplayPictureBox";
+            this.ItemDisplayPictureBox.Size = new System.Drawing.Size(449, 432);
+            this.ItemDisplayPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ItemDisplayPictureBox.TabIndex = 1;
+            this.ItemDisplayPictureBox.TabStop = false;
+            // 
+            // ItemReturnButton
+            // 
+            this.ItemReturnButton.BackgroundImage = global::ShoppingOnlineApp.Properties.Resources.RemoveButtonIcon;
+            this.ItemReturnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ItemReturnButton.Location = new System.Drawing.Point(3, 3);
+            this.ItemReturnButton.Name = "ItemReturnButton";
+            this.ItemReturnButton.Size = new System.Drawing.Size(33, 34);
+            this.ItemReturnButton.TabIndex = 0;
+            this.ItemReturnButton.UseVisualStyleBackColor = true;
+            this.ItemReturnButton.Click += new System.EventHandler(this.ItemReturnButton_Click);
+            // 
+            // ShoppingCartButton
+            // 
+            this.ShoppingCartButton.BackgroundImage = global::ShoppingOnlineApp.Properties.Resources.BuyIcon;
+            this.ShoppingCartButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ShoppingCartButton.Location = new System.Drawing.Point(1261, 134);
+            this.ShoppingCartButton.Name = "ShoppingCartButton";
+            this.ShoppingCartButton.Size = new System.Drawing.Size(47, 40);
+            this.ShoppingCartButton.TabIndex = 32;
+            this.ShoppingCartButton.UseVisualStyleBackColor = true;
+            this.ShoppingCartButton.Click += new System.EventHandler(this.ShoppingCartButton_Click);
+            // 
+            // MoneyFinishButton
+            // 
+            this.MoneyFinishButton.BackgroundImage = global::ShoppingOnlineApp.Properties.Resources.Money;
+            this.MoneyFinishButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MoneyFinishButton.Location = new System.Drawing.Point(1314, 134);
+            this.MoneyFinishButton.Name = "MoneyFinishButton";
+            this.MoneyFinishButton.Size = new System.Drawing.Size(47, 40);
+            this.MoneyFinishButton.TabIndex = 33;
+            this.MoneyFinishButton.UseVisualStyleBackColor = true;
+            // 
+            // CartPanel
+            // 
+            this.CartPanel.BackColor = System.Drawing.Color.White;
+            this.CartPanel.Controls.Add(this.CartExitButton);
+            this.CartPanel.Location = new System.Drawing.Point(0, 180);
+            this.CartPanel.Name = "CartPanel";
+            this.CartPanel.Size = new System.Drawing.Size(1371, 522);
+            this.CartPanel.TabIndex = 34;
+            this.CartPanel.Visible = false;
+            // 
+            // CartExitButton
+            // 
+            this.CartExitButton.BackgroundImage = global::ShoppingOnlineApp.Properties.Resources.RemoveButtonIcon;
+            this.CartExitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CartExitButton.Location = new System.Drawing.Point(12, 12);
+            this.CartExitButton.Name = "CartExitButton";
+            this.CartExitButton.Size = new System.Drawing.Size(40, 43);
+            this.CartExitButton.TabIndex = 0;
+            this.CartExitButton.UseVisualStyleBackColor = true;
+            this.CartExitButton.Click += new System.EventHandler(this.CartExitButton_Click);
+            // 
+            // HomeButton
+            // 
+            this.HomeButton.BackgroundImage = global::ShoppingOnlineApp.Properties.Resources.HomeIcon;
+            this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.HomeButton.Location = new System.Drawing.Point(1210, 134);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(45, 40);
+            this.HomeButton.TabIndex = 35;
+            this.HomeButton.UseVisualStyleBackColor = true;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            // 
+            // Shop
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ShoppingOnlineApp.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1369, 703);
+            this.Controls.Add(this.HomeButton);
+            this.Controls.Add(this.CartPanel);
+            this.Controls.Add(this.MoneyFinishButton);
+            this.Controls.Add(this.ShoppingCartButton);
+            this.Controls.Add(this.ItemDisplayPanel);
+            this.Controls.Add(this.title20);
+            this.Controls.Add(this.title19);
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.title18);
+            this.Controls.Add(this.title17);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.title16);
+            this.Controls.Add(this.title15);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.title14);
+            this.Controls.Add(this.title13);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.title12);
+            this.Controls.Add(this.title11);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.title10);
+            this.Controls.Add(this.title9);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.title8);
+            this.Controls.Add(this.title7);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.title6);
+            this.Controls.Add(this.title5);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.title4);
+            this.Controls.Add(this.title3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.title2);
+            this.Controls.Add(this.title1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.TTButton);
+            this.Controls.Add(this.KNSButton);
+            this.Controls.Add(this.LNButton);
+            this.Name = "Shop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Bookstore Shopping App";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.ItemDisplayPanel.ResumeLayout(false);
+            this.ItemDisplayPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SoLuongSanPham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemDisplayPictureBox)).EndInit();
+            this.CartPanel.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private Button LNButton;
+        private Button KNSButton;
+        private Button TTButton;
+        private PictureBox pictureBox1;
+        private Label title1;
+        private Label title2;
+        private Label title4;
+        private Label title3;
+        private PictureBox pictureBox2;
+        private Label title6;
+        private Label title5;
+        private PictureBox pictureBox3;
+        private Label title8;
+        private Label title7;
+        private PictureBox pictureBox4;
+        private Label title10;
+        private Label title9;
+        private PictureBox pictureBox5;
+        private Label title12;
+        private Label title11;
+        private PictureBox pictureBox6;
+        private Label title14;
+        private Label title13;
+        private PictureBox pictureBox7;
+        private Label title16;
+        private Label title15;
+        private PictureBox pictureBox8;
+        private Label title18;
+        private Label title17;
+        private PictureBox pictureBox9;
+        private Label title20;
+        private Label title19;
+        private PictureBox pictureBox10;
+        private Panel ItemDisplayPanel;
+        private Button ItemReturnButton;
+        private Label ItemPriceLabel;
+        private Label ItemNameLabel;
+        private PictureBox ItemDisplayPictureBox;
+        private TextBox DescriptionBox;
+        private NumericUpDown SoLuongSanPham;
+        private Label label1;
+        private Button BuyButton;
+        private Button ShoppingCartButton;
+        private Button MoneyFinishButton;
+        private Panel CartPanel;
+        private Button HomeButton;
+        private Button CartExitButton;
+    }
+}
