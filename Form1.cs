@@ -1,4 +1,6 @@
-﻿namespace ShoppingOnlineApp
+﻿using System.Windows.Forms;
+
+namespace ShoppingOnlineApp
 {
     public partial class Shop : Form
     {
@@ -36,6 +38,7 @@
             title19.Text = "Your name";
             title20.Text = "76.000 VND";
         }
+        string newPath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\CartRecord.txt";
         int Flag1 = 1;
         int Flag2 = 2;
         int Flag3 = 3;
@@ -299,7 +302,7 @@
                     break;
                 case 13:
                     ItemDisplayPictureBox.Image = Properties.Resources._13;
-                    ItemNameLabel.Text = "Đánh thức con người phi thường trong bạn\n- Tác giả: Anthony Robbins";
+                    ItemNameLabel.Text = "Đánh thức con người phi thường \ntrong bạn - Tác giả: Anthony Robbins";
                     ItemPriceLabel.Text = "96.000 VND";
                     path = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Description\13.txt";
                     if (File.Exists(path))
@@ -622,27 +625,49 @@
         {
             ItemDisplayPanel.Visible = false;
         }
-
         private void BuyButton_Click(object sender, EventArgs e)
         {
-
+            string BookName = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Tổng hợp\NameOfAllBooks.txt";
+            string newPath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\CartRecord.txt";
+            if (File.Exists(newPath) == false)
+                File.Create(newPath).Close();
+            string line = File.ReadLines(BookName).Skip(Flag-1).Take(1).First();
+            line = line + " - Số lượng: " + SoLuongSanPham.Value.ToString() + "\n";
+            File.AppendAllText(newPath, line);
+            SoLuongSanPham.Value = Convert.ToDecimal(1);
+            ItemDisplayPanel.Visible = false;
         }
 
         private void ShoppingCartButton_Click(object sender, EventArgs e)
         {
             CartPanel.Visible = true;
             ItemDisplayPanel.Visible = false;
+            string filePath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\CartRecord.txt";
+            if (System.IO.File.Exists(filePath))
+                CartCheckListBox.Items.AddRange(System.IO.File.ReadAllLines(filePath));
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
             CartPanel.Visible = false;
             ItemDisplayPanel.Visible = false;
+            CartCheckListBox.Items.Clear();
         }
 
         private void CartExitButton_Click(object sender, EventArgs e)
         {
             CartPanel.Visible=false;
+            CartCheckListBox.Items.Clear();
+        }
+
+        private void ContinueCartButton_Click(object sender, EventArgs e)
+        {
+            string newPath1 = @"D:\Project\CS511\ShoppingOnlineApp\Resources\FinalCartRecord.txt";
+            if (File.Exists(newPath1) == false)
+                File.Create(newPath1).Close();
+            int countCheckedListInListBox = CartCheckListBox.CheckedItems.Count;
+            for (int i = 0; i < countCheckedListInListBox; i++)
+                File.AppendAllText(newPath1, CartCheckListBox.CheckedItems[i].ToString() + "\n");
         }
     }
 }

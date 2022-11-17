@@ -75,6 +75,9 @@
             this.CartPanel = new System.Windows.Forms.Panel();
             this.CartExitButton = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
+            this.CartCheckListBox = new System.Windows.Forms.CheckedListBox();
+            this.CartNameLabel = new System.Windows.Forms.Label();
+            this.ContinueCartButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -583,6 +586,9 @@
             // CartPanel
             // 
             this.CartPanel.BackColor = System.Drawing.Color.White;
+            this.CartPanel.Controls.Add(this.ContinueCartButton);
+            this.CartPanel.Controls.Add(this.CartNameLabel);
+            this.CartPanel.Controls.Add(this.CartCheckListBox);
             this.CartPanel.Controls.Add(this.CartExitButton);
             this.CartPanel.Location = new System.Drawing.Point(0, 180);
             this.CartPanel.Name = "CartPanel";
@@ -611,6 +617,38 @@
             this.HomeButton.TabIndex = 35;
             this.HomeButton.UseVisualStyleBackColor = true;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            // 
+            // CartCheckListBox
+            // 
+            this.CartCheckListBox.FormattingEnabled = true;
+            this.CartCheckListBox.Location = new System.Drawing.Point(105, 96);
+            this.CartCheckListBox.Name = "CartCheckListBox";
+            this.CartCheckListBox.Size = new System.Drawing.Size(1203, 340);
+            this.CartCheckListBox.TabIndex = 1;
+            // 
+            // CartNameLabel
+            // 
+            this.CartNameLabel.AutoSize = true;
+            this.CartNameLabel.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CartNameLabel.ForeColor = System.Drawing.Color.Red;
+            this.CartNameLabel.Location = new System.Drawing.Point(382, 12);
+            this.CartNameLabel.Name = "CartNameLabel";
+            this.CartNameLabel.Size = new System.Drawing.Size(701, 68);
+            this.CartNameLabel.TabIndex = 2;
+            this.CartNameLabel.Text = "Giỏ hàng của quý khách";
+            // 
+            // ContinueCartButton
+            // 
+            this.ContinueCartButton.BackColor = System.Drawing.Color.LightCoral;
+            this.ContinueCartButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ContinueCartButton.ForeColor = System.Drawing.Color.Blue;
+            this.ContinueCartButton.Location = new System.Drawing.Point(648, 455);
+            this.ContinueCartButton.Name = "ContinueCartButton";
+            this.ContinueCartButton.Size = new System.Drawing.Size(131, 47);
+            this.ContinueCartButton.TabIndex = 3;
+            this.ContinueCartButton.Text = "Tiếp tục";
+            this.ContinueCartButton.UseVisualStyleBackColor = false;
+            this.ContinueCartButton.Click += new System.EventHandler(this.ContinueCartButton_Click);
             // 
             // Shop
             // 
@@ -675,6 +713,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SoLuongSanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemDisplayPictureBox)).EndInit();
             this.CartPanel.ResumeLayout(false);
+            this.CartPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -729,5 +768,8 @@
         private Panel CartPanel;
         private Button HomeButton;
         private Button CartExitButton;
+        private Button ContinueCartButton;
+        private Label CartNameLabel;
+        private CheckedListBox CartCheckListBox;
     }
 }
