@@ -73,11 +73,21 @@
             this.ShoppingCartButton = new System.Windows.Forms.Button();
             this.MoneyFinishButton = new System.Windows.Forms.Button();
             this.CartPanel = new System.Windows.Forms.Panel();
+            this.DeleteCartItemButton = new System.Windows.Forms.Button();
+            this.ContinueCartButton = new System.Windows.Forms.Button();
+            this.CartNameLabel = new System.Windows.Forms.Label();
+            this.CartCheckListBox = new System.Windows.Forms.CheckedListBox();
             this.CartExitButton = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
-            this.CartCheckListBox = new System.Windows.Forms.CheckedListBox();
-            this.CartNameLabel = new System.Windows.Forms.Label();
-            this.ContinueCartButton = new System.Windows.Forms.Button();
+            this.FillFormAndPayMoneyPanel = new System.Windows.Forms.Panel();
+            this.MoneyTextBox = new System.Windows.Forms.TextBox();
+            this.ItemIDTextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.PhoneTextBox = new System.Windows.Forms.TextBox();
+            this.AddressTextBox = new System.Windows.Forms.TextBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
+            this.MoneyReturnButton = new System.Windows.Forms.Button();
+            this.PayingMoneyButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -92,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SoLuongSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemDisplayPictureBox)).BeginInit();
             this.CartPanel.SuspendLayout();
+            this.FillFormAndPayMoneyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LNButton
@@ -586,6 +597,7 @@
             // CartPanel
             // 
             this.CartPanel.BackColor = System.Drawing.Color.White;
+            this.CartPanel.Controls.Add(this.DeleteCartItemButton);
             this.CartPanel.Controls.Add(this.ContinueCartButton);
             this.CartPanel.Controls.Add(this.CartNameLabel);
             this.CartPanel.Controls.Add(this.CartCheckListBox);
@@ -595,6 +607,51 @@
             this.CartPanel.Size = new System.Drawing.Size(1371, 522);
             this.CartPanel.TabIndex = 34;
             this.CartPanel.Visible = false;
+            // 
+            // DeleteCartItemButton
+            // 
+            this.DeleteCartItemButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.DeleteCartItemButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DeleteCartItemButton.ForeColor = System.Drawing.Color.Red;
+            this.DeleteCartItemButton.Location = new System.Drawing.Point(492, 455);
+            this.DeleteCartItemButton.Name = "DeleteCartItemButton";
+            this.DeleteCartItemButton.Size = new System.Drawing.Size(144, 44);
+            this.DeleteCartItemButton.TabIndex = 4;
+            this.DeleteCartItemButton.Text = "Xóa vật";
+            this.DeleteCartItemButton.UseVisualStyleBackColor = false;
+            this.DeleteCartItemButton.Click += new System.EventHandler(this.DeleteCartItemButton_Click);
+            // 
+            // ContinueCartButton
+            // 
+            this.ContinueCartButton.BackColor = System.Drawing.Color.LightCoral;
+            this.ContinueCartButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ContinueCartButton.ForeColor = System.Drawing.Color.Blue;
+            this.ContinueCartButton.Location = new System.Drawing.Point(771, 455);
+            this.ContinueCartButton.Name = "ContinueCartButton";
+            this.ContinueCartButton.Size = new System.Drawing.Size(153, 50);
+            this.ContinueCartButton.TabIndex = 3;
+            this.ContinueCartButton.Text = "Tiếp tục";
+            this.ContinueCartButton.UseVisualStyleBackColor = false;
+            this.ContinueCartButton.Click += new System.EventHandler(this.ContinueCartButton_Click);
+            // 
+            // CartNameLabel
+            // 
+            this.CartNameLabel.AutoSize = true;
+            this.CartNameLabel.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CartNameLabel.ForeColor = System.Drawing.Color.Red;
+            this.CartNameLabel.Location = new System.Drawing.Point(382, 12);
+            this.CartNameLabel.Name = "CartNameLabel";
+            this.CartNameLabel.Size = new System.Drawing.Size(701, 68);
+            this.CartNameLabel.TabIndex = 2;
+            this.CartNameLabel.Text = "Giỏ hàng của quý khách";
+            // 
+            // CartCheckListBox
+            // 
+            this.CartCheckListBox.FormattingEnabled = true;
+            this.CartCheckListBox.Location = new System.Drawing.Point(105, 96);
+            this.CartCheckListBox.Name = "CartCheckListBox";
+            this.CartCheckListBox.Size = new System.Drawing.Size(1203, 340);
+            this.CartCheckListBox.TabIndex = 1;
             // 
             // CartExitButton
             // 
@@ -618,37 +675,93 @@
             this.HomeButton.UseVisualStyleBackColor = true;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
-            // CartCheckListBox
+            // FillFormAndPayMoneyPanel
             // 
-            this.CartCheckListBox.FormattingEnabled = true;
-            this.CartCheckListBox.Location = new System.Drawing.Point(105, 96);
-            this.CartCheckListBox.Name = "CartCheckListBox";
-            this.CartCheckListBox.Size = new System.Drawing.Size(1203, 340);
-            this.CartCheckListBox.TabIndex = 1;
+            this.FillFormAndPayMoneyPanel.BackgroundImage = global::ShoppingOnlineApp.Properties.Resources.NewBackground;
+            this.FillFormAndPayMoneyPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FillFormAndPayMoneyPanel.Controls.Add(this.PayingMoneyButton);
+            this.FillFormAndPayMoneyPanel.Controls.Add(this.MoneyReturnButton);
+            this.FillFormAndPayMoneyPanel.Controls.Add(this.MoneyTextBox);
+            this.FillFormAndPayMoneyPanel.Controls.Add(this.ItemIDTextBox);
+            this.FillFormAndPayMoneyPanel.Controls.Add(this.EmailTextBox);
+            this.FillFormAndPayMoneyPanel.Controls.Add(this.PhoneTextBox);
+            this.FillFormAndPayMoneyPanel.Controls.Add(this.AddressTextBox);
+            this.FillFormAndPayMoneyPanel.Controls.Add(this.NameTextBox);
+            this.FillFormAndPayMoneyPanel.Location = new System.Drawing.Point(0, 180);
+            this.FillFormAndPayMoneyPanel.Name = "FillFormAndPayMoneyPanel";
+            this.FillFormAndPayMoneyPanel.Size = new System.Drawing.Size(1371, 522);
+            this.FillFormAndPayMoneyPanel.TabIndex = 36;
+            this.FillFormAndPayMoneyPanel.Visible = false;
             // 
-            // CartNameLabel
+            // MoneyTextBox
             // 
-            this.CartNameLabel.AutoSize = true;
-            this.CartNameLabel.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CartNameLabel.ForeColor = System.Drawing.Color.Red;
-            this.CartNameLabel.Location = new System.Drawing.Point(382, 12);
-            this.CartNameLabel.Name = "CartNameLabel";
-            this.CartNameLabel.Size = new System.Drawing.Size(701, 68);
-            this.CartNameLabel.TabIndex = 2;
-            this.CartNameLabel.Text = "Giỏ hàng của quý khách";
+            this.MoneyTextBox.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MoneyTextBox.Location = new System.Drawing.Point(492, 383);
+            this.MoneyTextBox.Name = "MoneyTextBox";
+            this.MoneyTextBox.ReadOnly = true;
+            this.MoneyTextBox.Size = new System.Drawing.Size(571, 35);
+            this.MoneyTextBox.TabIndex = 41;
             // 
-            // ContinueCartButton
+            // ItemIDTextBox
             // 
-            this.ContinueCartButton.BackColor = System.Drawing.Color.LightCoral;
-            this.ContinueCartButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ContinueCartButton.ForeColor = System.Drawing.Color.Blue;
-            this.ContinueCartButton.Location = new System.Drawing.Point(648, 455);
-            this.ContinueCartButton.Name = "ContinueCartButton";
-            this.ContinueCartButton.Size = new System.Drawing.Size(131, 47);
-            this.ContinueCartButton.TabIndex = 3;
-            this.ContinueCartButton.Text = "Tiếp tục";
-            this.ContinueCartButton.UseVisualStyleBackColor = false;
-            this.ContinueCartButton.Click += new System.EventHandler(this.ContinueCartButton_Click);
+            this.ItemIDTextBox.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ItemIDTextBox.Location = new System.Drawing.Point(492, 331);
+            this.ItemIDTextBox.Name = "ItemIDTextBox";
+            this.ItemIDTextBox.ReadOnly = true;
+            this.ItemIDTextBox.Size = new System.Drawing.Size(571, 35);
+            this.ItemIDTextBox.TabIndex = 40;
+            // 
+            // EmailTextBox
+            // 
+            this.EmailTextBox.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.EmailTextBox.Location = new System.Drawing.Point(492, 273);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(571, 35);
+            this.EmailTextBox.TabIndex = 39;
+            // 
+            // PhoneTextBox
+            // 
+            this.PhoneTextBox.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PhoneTextBox.Location = new System.Drawing.Point(492, 222);
+            this.PhoneTextBox.Name = "PhoneTextBox";
+            this.PhoneTextBox.Size = new System.Drawing.Size(571, 35);
+            this.PhoneTextBox.TabIndex = 38;
+            // 
+            // AddressTextBox
+            // 
+            this.AddressTextBox.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddressTextBox.Location = new System.Drawing.Point(492, 168);
+            this.AddressTextBox.Name = "AddressTextBox";
+            this.AddressTextBox.Size = new System.Drawing.Size(571, 35);
+            this.AddressTextBox.TabIndex = 37;
+            // 
+            // NameTextBox
+            // 
+            this.NameTextBox.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NameTextBox.Location = new System.Drawing.Point(492, 114);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(571, 35);
+            this.NameTextBox.TabIndex = 0;
+            // 
+            // MoneyReturnButton
+            // 
+            this.MoneyReturnButton.Location = new System.Drawing.Point(492, 451);
+            this.MoneyReturnButton.Name = "MoneyReturnButton";
+            this.MoneyReturnButton.Size = new System.Drawing.Size(154, 48);
+            this.MoneyReturnButton.TabIndex = 42;
+            this.MoneyReturnButton.Text = "Quay lại";
+            this.MoneyReturnButton.UseVisualStyleBackColor = true;
+            this.MoneyReturnButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // PayingMoneyButton
+            // 
+            this.PayingMoneyButton.Location = new System.Drawing.Point(757, 446);
+            this.PayingMoneyButton.Name = "PayingMoneyButton";
+            this.PayingMoneyButton.Size = new System.Drawing.Size(149, 53);
+            this.PayingMoneyButton.TabIndex = 43;
+            this.PayingMoneyButton.Text = "Thanh toán";
+            this.PayingMoneyButton.UseVisualStyleBackColor = true;
+            this.PayingMoneyButton.Click += new System.EventHandler(this.PayingMoneyButton_Click);
             // 
             // Shop
             // 
@@ -657,6 +770,7 @@
             this.BackgroundImage = global::ShoppingOnlineApp.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1369, 703);
+            this.Controls.Add(this.FillFormAndPayMoneyPanel);
             this.Controls.Add(this.HomeButton);
             this.Controls.Add(this.CartPanel);
             this.Controls.Add(this.MoneyFinishButton);
@@ -714,6 +828,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemDisplayPictureBox)).EndInit();
             this.CartPanel.ResumeLayout(false);
             this.CartPanel.PerformLayout();
+            this.FillFormAndPayMoneyPanel.ResumeLayout(false);
+            this.FillFormAndPayMoneyPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -771,5 +887,15 @@
         private Button ContinueCartButton;
         private Label CartNameLabel;
         private CheckedListBox CartCheckListBox;
+        private Button DeleteCartItemButton;
+        private Panel FillFormAndPayMoneyPanel;
+        private TextBox MoneyTextBox;
+        private TextBox ItemIDTextBox;
+        private TextBox EmailTextBox;
+        private TextBox PhoneTextBox;
+        private TextBox AddressTextBox;
+        private TextBox NameTextBox;
+        private Button PayingMoneyButton;
+        private Button MoneyReturnButton;
     }
 }

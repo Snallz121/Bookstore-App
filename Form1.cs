@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace ShoppingOnlineApp
 {
@@ -660,14 +661,114 @@ namespace ShoppingOnlineApp
             CartCheckListBox.Items.Clear();
         }
 
+        private int TakeNumbersOfItem(string Line)
+        {
+            string[] collection = Line.Split(' ');
+            string string2 = collection[collection.Length - 1];
+            return Convert.ToInt32(string2);
+        }
+
+        private int TakePosOfItem(string Line)
+        {
+            int pos = 0;
+            string BookName = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Tổng hợp\NameOfAllBooks.txt";
+            string[] BookNameArray = File.ReadAllLines(BookName);
+            int end = Line.IndexOf(" - Số lượng: ");
+            string string1 = Line.Substring(0, end);
+            for(int i = 0; i < BookNameArray.Length; i++)
+            {
+                if (BookNameArray[i] == string1)
+                    pos = i + 1;
+            }
+            return pos;
+        }
+
+        Int32 TotalMoney = 0;
         private void ContinueCartButton_Click(object sender, EventArgs e)
         {
-            string newPath1 = @"D:\Project\CS511\ShoppingOnlineApp\Resources\FinalCartRecord.txt";
-            if (File.Exists(newPath1) == false)
-                File.Create(newPath1).Close();
-            int countCheckedListInListBox = CartCheckListBox.CheckedItems.Count;
-            for (int i = 0; i < countCheckedListInListBox; i++)
-                File.AppendAllText(newPath1, CartCheckListBox.CheckedItems[i].ToString() + "\n");
+            string PricePath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Tổng hợp\Price.txt";
+            string filePath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\CartRecord.txt";
+            string[] NewContent = File.ReadAllLines(filePath);
+            for(var i = 0; i < NewContent.Length; i++)
+            {
+                int pos = TakePosOfItem(NewContent[i]);
+                int NumberOfItem = TakeNumbersOfItem(NewContent[i]);
+                string Price = File.ReadLines(PricePath).Skip(pos - 1).Take(1).First();
+                TotalMoney = TotalMoney + NumberOfItem * Convert.ToInt32(Price);
+            }
+
+            string CountPackage = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Hóa đơn\Count.txt";
+            int count = Convert.ToInt32(File.ReadLines(CountPackage).First());
+            string id = "id " + (count+1).ToString();
+            ItemIDTextBox.Text = id;
+            MoneyTextBox.Text = TotalMoney.ToString();
+
+            CustomDeleteLineFromTextFile(CountPackage, count.ToString());
+            File.AppendAllText(CountPackage, (count + 1).ToString());
+            CartPanel.Visible = false;
+            FillFormAndPayMoneyPanel.Visible = true;
+        }
+        private void CustomDeleteLineFromTextFile(string PathToFile, string DeleteLine)
+        {
+            var tempFile = Path.GetTempFileName();
+            var linesToKeep = File.ReadLines(PathToFile).Where(l => l != DeleteLine);
+
+            File.WriteAllLines(tempFile, linesToKeep);
+
+            File.Delete(PathToFile);
+            File.Move(tempFile, PathToFile);
+        }
+        private void DeleteCartItemButton_Click(object sender, EventArgs e)
+        {
+            string newPath1 = @"D:\Project\CS511\ShoppingOnlineApp\Resources\CartRecord.txt";
+            while (CartCheckListBox.CheckedItems.Count > 0)
+            {
+                string tmpLine = CartCheckListBox.CheckedItems[0].ToString();
+                CustomDeleteLineFromTextFile(newPath1, tmpLine);
+                CartCheckListBox.Items.Remove(CartCheckListBox.CheckedItems[0]);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FillFormAndPayMoneyPanel.Visible = false;
+            CartPanel.Visible = true;
+            TotalMoney = 0;
+            string CountPackage = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Hóa đơn\Count.txt";
+            int count = Convert.ToInt32(File.ReadLines(CountPackage).First());
+            CustomDeleteLineFromTextFile(CountPackage, count.ToString());
+            File.AppendAllText(CountPackage, (count - 1).ToString());
+        }
+
+        private void PayingMoneyButton_Click(object sender, EventArgs e)
+        {
+            string CourtDataPath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Hóa đơn\";
+            string filePath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\CartRecord.txt";
+            string id = ItemIDTextBox.Text;
+            CourtDataPath = CourtDataPath + id + ".txt";
+            if (File.Exists(CourtDataPath) == false)
+                File.Create(CourtDataPath).Close();
+            File.AppendAllText(CourtDataPath, "Họ và tên người nhận: " + NameTextBox.Text + "\n");
+            File.AppendAllText(CourtDataPath,"Địa chỉ người nhận: " + AddressTextBox.Text + "\n");
+            File.AppendAllText(CourtDataPath, "Số điện thoại người nhận: " + PhoneTextBox.Text + "\n" );
+            File.AppendAllText(CourtDataPath, "Email người nhận: " + EmailTextBox.Text + "\n");
+            File.AppendAllText(CourtDataPath, "Mã đơn hàng: " + ItemIDTextBox.Text + "\n");
+            File.AppendAllText(CourtDataPath, "Thành tiền đơn hàng: " + MoneyTextBox.Text + "\n");
+            File.AppendAllText(CourtDataPath, "\nDANH SÁCH SẢN PHẨM:\n");
+            string tmp = File.ReadAllText(filePath);
+            File.AppendAllText(CourtDataPath, tmp);
+            MessageBox.Show("Bạn đã đặt hàng thành công");
+            File.WriteAllText(filePath, string.Empty);
+            CartPanel.Visible = false;
+            FillFormAndPayMoneyPanel.Visible = false;
+            NameTextBox.Text = "";
+            AddressTextBox.Text = "";
+            PhoneTextBox.Text = "";
+            EmailTextBox.Text = "";
+            ItemIDTextBox.Text = "";
+            MoneyTextBox.Text = "";
+            TotalMoney = 0;
+            CartCheckListBox.Items.Clear();
         }
     }
 }
