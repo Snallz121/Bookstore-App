@@ -1,1 +1,1 @@
-Bài thực hành số 2 - Môn CS551
+Bài thực hành số 2 - Môn CS511
