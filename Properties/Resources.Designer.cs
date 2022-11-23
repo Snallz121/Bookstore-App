@@ -303,6 +303,16 @@ namespace ShoppingOnlineApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _352426_history_icon {
+            get {
+                object obj = ResourceManager.GetObject("352426_history_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4 {
             get {
                 object obj = ResourceManager.GetObject("_4", resourceCulture);
@@ -386,6 +396,16 @@ namespace ShoppingOnlineApp.Properties {
         internal static System.Drawing.Bitmap BuyIcon {
             get {
                 object obj = ResourceManager.GetObject("BuyIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clone {
+            get {
+                object obj = ResourceManager.GetObject("clone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

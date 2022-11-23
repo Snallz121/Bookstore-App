@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace ShoppingOnlineApp
@@ -38,8 +39,13 @@ namespace ShoppingOnlineApp
             pictureBox10.BackgroundImage = Properties.Resources._10;
             title19.Text = "Your name";
             title20.Text = "76.000 VND";
+            string ViewRecordFile = @"D:\Project\CS511\ShoppingOnlineApp\Resources\ViewFileRecord.txt";
+            if (File.Exists(ViewRecordFile) == false)
+                File.Create(ViewRecordFile).Close();
+
         }
         string newPath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\CartRecord.txt";
+        string ViewRecordFile = @"D:\Project\CS511\ShoppingOnlineApp\Resources\ViewFileRecord.txt";
         int Flag1 = 1;
         int Flag2 = 2;
         int Flag3 = 3;
@@ -215,6 +221,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" +"Mobuseka - Thế giới Otome Game thật khắc nghiệt với nhân vật quần chúng tập 1 - Tác giả: Mishima Yomu\n");
                     break;
                 case 11:
                     ItemDisplayPictureBox.Image = Properties.Resources._11;
@@ -226,6 +233,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Nghệ thuật tư duy phản biện - Tác giả: Albert Rutherford\n");
                     break;
                 case 21:
                     ItemDisplayPictureBox.Image = Properties.Resources._21;
@@ -237,6 +245,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Spy x Family tập 1 - Tác giả: Tatsuya Endo\n");
                     break;
             }
                    
@@ -258,6 +267,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Mobuseka - Thế giới Otome Game thật khắc nghiệt với nhân vật quần chúng tập 2 - Tác giả: Mishima Yomu\n");
                     break;
                 case 12:
                     ItemDisplayPictureBox.Image = Properties.Resources._12;
@@ -269,6 +279,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Đi tìm lẽ sống - Tác giả: Viktor E. Frankl\n");
                     break;
                 case 22:
                     ItemDisplayPictureBox.Image = Properties.Resources._22;
@@ -280,6 +291,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Spy x Family tập 2 - Tác giả: Tatsuya Endo\n");
                     break;
             }
         }
@@ -300,6 +312,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Mobuseka - Thế giới Otome Game thật khắc nghiệt với nhân vật quần chúng tập 3 - Tác giả: Mishima Yomu\n");
                     break;
                 case 13:
                     ItemDisplayPictureBox.Image = Properties.Resources._13;
@@ -311,6 +324,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Đánh thức con người phi thường trong bạn - Tác giả: Anthony Robbins\n");
                     break;
                 case 23:
                     ItemDisplayPictureBox.Image = Properties.Resources._23;
@@ -322,6 +336,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Spy x Family tập 3 - Tác giả: Tatsuya Endo\n");
                     break;
             }
         }
@@ -342,6 +357,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Mobuseka - Thế giới Otome Game thật khắc nghiệt với nhân vật quần chúng tập 4 - Tác giả: Mishima Yomu\n");
                     break;
                 case 14:
                     ItemDisplayPictureBox.Image = Properties.Resources._14;
@@ -353,11 +369,11 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
-
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Phải trái đúng sai - Tác giả: Michael Sandels\n");
                     break;
                 case 24:
                     ItemDisplayPictureBox.Image = Properties.Resources._24;
-                    ItemNameLabel.Text = "Spy x Family tập 4\n- Tác giả: Michael Sandels";
+                    ItemNameLabel.Text = "Spy x Family tập 4\n- Tác giả: Tatsuya Endo";
                     ItemPriceLabel.Text = "47.000 VND";
                     path = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Description\24.txt";
                     if (File.Exists(path))
@@ -365,6 +381,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Spy x Family tập 4 - Tác giả: Tatsuya Endo\n");
                     break;
             }
         }
@@ -385,6 +402,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Mobuseka - Thế giới Otome Game thật khắc nghiệt với nhân vật quần chúng tập 5 - Tác giả: Mishima Yomu\n");
                     break;
                 case 15:
                     ItemDisplayPictureBox.Image = Properties.Resources._15;
@@ -396,6 +414,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Tuổi trẻ đáng giá bao nhiêu ? - Tác giả: Rosie Nguyễn\n");
                     break;
                 case 25:
                     ItemDisplayPictureBox.Image = Properties.Resources._25;
@@ -407,6 +426,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Jujutsu Kaisen - Chú thuật hồi chiến tập 1 - Tác giả: Gege Akutami\n");
                     break;
             }
         }
@@ -427,6 +447,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Roshidere - Arya bàn bên lúc nào cũng chọc ghẹo tôi bằng tiếng nga - Tác giả: 燦々SUN\n");
                     break;
                 case 16:
                     ItemDisplayPictureBox.Image = Properties.Resources._16;
@@ -438,6 +459,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Đắc nhân tâm - Tác giả: Dale Carnegie\n");
                     break;
                 case 26:
                     ItemDisplayPictureBox.Image = Properties.Resources._26;
@@ -449,6 +471,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Jujutsu Kaisen - Chú thuật hồi chiến tập 2 - Tác giả: Gege Akutami\n");
                     break;
             }
         }
@@ -469,6 +492,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Rabudame - Ai dám bảo Romcom không có ngoài đời thực - Tác giả: Hajikano Sou\n");
                     break;
                 case 17:
                     ItemDisplayPictureBox.Image = Properties.Resources._17;
@@ -480,6 +504,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Súng, vi trùng và thép - Tác giả: Jared Damon\n");
                     break;
                 case 27:
                     ItemDisplayPictureBox.Image = Properties.Resources._27;
@@ -491,6 +516,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Kaguya-sama, Cuộc chiến tỏ tình tập 1 - Tác giả: Akasaka Aka\n");
                     break;
             }
         }
@@ -511,6 +537,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Unnamed Memory, Hồi úc không tên tập 1 - Tác giả: Kuji Furumiya\n");
                     break;
                 case 18:
                     ItemDisplayPictureBox.Image = Properties.Resources._18;
@@ -522,6 +549,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Tôi tự học - Tác giả: Nguyễn Duy Cần\n");
                     break;
                 case 28:
                     ItemDisplayPictureBox.Image = Properties.Resources._28;
@@ -533,6 +561,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Tonikaku Kawaii - Tóm lại là em dễ thương, được chưa ? - tập 1 - Tác giả: Kenjirou Hata\n");
                     break;
             }
         }
@@ -553,6 +582,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Colorful, Sắc màu - Tác giả: Eto Mori\n");
                     break;
                 case 19:
                     ItemDisplayPictureBox.Image = Properties.Resources._20;
@@ -564,6 +594,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "EQ, Trí thông minh xúc cảm trong công việc - Tác giả: Justin Bariso\n");
                     break;
                 case 29:
                     ItemDisplayPictureBox.Image = Properties.Resources._29;
@@ -575,6 +606,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Tonikaku Kawaii - Tóm lại là em dễ thương, được chưa ? - tập 2 - Tác giả: Kenjirou Hata\n");
                     break;
             }
         }
@@ -595,6 +627,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Your name - Tác giả: Shinkai Makoto\n");
                     break;
                 case 20:
                     ItemDisplayPictureBox.Image = Properties.Resources._19;
@@ -606,6 +639,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Bạn không thông minh lắm đâu - Tác giả: David McRaney\n");
                     break;
                 case 30:
                     ItemDisplayPictureBox.Image = Properties.Resources._30;
@@ -617,6 +651,7 @@ namespace ShoppingOnlineApp
                         var tmp = File.ReadAllText(path);
                         DescriptionBox.Text = tmp;
                     }
+                    File.AppendAllText(ViewRecordFile, DateTime.Now.ToString() + "\t" + "Tonikaku Kawaii - Tóm lại là em dễ thương, được chưa ? - tập 3 - Tác giả: Kenjirou Hata\n");
                     break;
             }
             //MessageBox.Show("work" + Flag5.ToString());
@@ -653,6 +688,7 @@ namespace ShoppingOnlineApp
             CartPanel.Visible = false;
             ItemDisplayPanel.Visible = false;
             CartCheckListBox.Items.Clear();
+            AccountPanel.Visible = false;
         }
 
         private void CartExitButton_Click(object sender, EventArgs e)
@@ -689,24 +725,28 @@ namespace ShoppingOnlineApp
             string PricePath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Tổng hợp\Price.txt";
             string filePath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\CartRecord.txt";
             string[] NewContent = File.ReadAllLines(filePath);
-            for(var i = 0; i < NewContent.Length; i++)
+            if (NewContent.Length > 0)
             {
-                int pos = TakePosOfItem(NewContent[i]);
-                int NumberOfItem = TakeNumbersOfItem(NewContent[i]);
-                string Price = File.ReadLines(PricePath).Skip(pos - 1).Take(1).First();
-                TotalMoney = TotalMoney + NumberOfItem * Convert.ToInt32(Price);
+                for (var i = 0; i < NewContent.Length; i++)
+                {
+                    int pos = TakePosOfItem(NewContent[i]);
+                    int NumberOfItem = TakeNumbersOfItem(NewContent[i]);
+                    string Price = File.ReadLines(PricePath).Skip(pos - 1).Take(1).First();
+                    TotalMoney = TotalMoney + NumberOfItem * Convert.ToInt32(Price);
+                }
+
+                string CountPackage = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Hóa đơn\Count.txt";
+                int count = Convert.ToInt32(File.ReadLines(CountPackage).First());
+                string id = "id " + (count + 1).ToString();
+                ItemIDTextBox.Text = id;
+                MoneyTextBox.Text = TotalMoney.ToString();
+
+                CustomDeleteLineFromTextFile(CountPackage, count.ToString());
+                File.AppendAllText(CountPackage, (count + 1).ToString());
+                CartPanel.Visible = false;
+                FillFormAndPayMoneyPanel.Visible = true;
             }
-
-            string CountPackage = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Hóa đơn\Count.txt";
-            int count = Convert.ToInt32(File.ReadLines(CountPackage).First());
-            string id = "id " + (count+1).ToString();
-            ItemIDTextBox.Text = id;
-            MoneyTextBox.Text = TotalMoney.ToString();
-
-            CustomDeleteLineFromTextFile(CountPackage, count.ToString());
-            File.AppendAllText(CountPackage, (count + 1).ToString());
-            CartPanel.Visible = false;
-            FillFormAndPayMoneyPanel.Visible = true;
+            else { MessageBox.Show("Oops, Bạn chưa có gì trong giỏ hàng cả"); }
         }
         private void CustomDeleteLineFromTextFile(string PathToFile, string DeleteLine)
         {
@@ -739,9 +779,11 @@ namespace ShoppingOnlineApp
             CustomDeleteLineFromTextFile(CountPackage, count.ToString());
             File.AppendAllText(CountPackage, (count - 1).ToString());
         }
-
+        string IDHoaDonPath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Hóa đơn\Mã hóa đơn.txt";
         private void PayingMoneyButton_Click(object sender, EventArgs e)
         {
+            if (File.Exists(IDHoaDonPath) == false)
+                File.Create(IDHoaDonPath).Close();
             string CourtDataPath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\Hóa đơn\";
             string filePath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\CartRecord.txt";
             string id = ItemIDTextBox.Text;
@@ -757,7 +799,8 @@ namespace ShoppingOnlineApp
             File.AppendAllText(CourtDataPath, "\nDANH SÁCH SẢN PHẨM:\n");
             string tmp = File.ReadAllText(filePath);
             File.AppendAllText(CourtDataPath, tmp);
-            MessageBox.Show("Bạn đã đặt hàng thành công");
+            File.AppendAllText(IDHoaDonPath, id + ".txt\n");
+            MessageBox.Show("Bạn đã đặt hàng thành công\nĐơn hang sẽ được giao sau 15 ngày");
             File.WriteAllText(filePath, string.Empty);
             CartPanel.Visible = false;
             FillFormAndPayMoneyPanel.Visible = false;
@@ -769,6 +812,93 @@ namespace ShoppingOnlineApp
             MoneyTextBox.Text = "";
             TotalMoney = 0;
             CartCheckListBox.Items.Clear();
+        }
+        int HistoryFlag = 1;
+        private void MoneyFinishButton_Click(object sender, EventArgs e)
+        {
+            AccountPanel.Visible = true;
+            HistoryDisplayContent.Items.AddRange(File.ReadAllLines("D:\\Project\\CS511\\ShoppingOnlineApp\\Resources\\Hóa đơn\\Mã hóa đơn.txt"));
+        }
+        private void HistoryDisplayContent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(HistoryFlag)
+            {
+                case 1:
+                    DeleteHistoryButton.Visible = false;
+                    HistoryDisplayContent.Items.Clear();
+                    HistoryDisplayContent.Items.AddRange(File.ReadAllLines("D:\\Project\\CS511\\ShoppingOnlineApp\\Resources\\Hóa đơn\\Mã hóa đơn.txt"));
+                    string SelectedFile = HistoryDisplayContent.GetItemText(HistoryDisplayContent.Text);
+                    string tmp = @"D:\\Project\\CS511\\ShoppingOnlineApp\\Resources\\Hóa đơn\\" + SelectedFile;
+                    var tmpFile1 = File.ReadAllText(tmp);
+                    MessageBox.Show(tmpFile1);
+                    if (File.Exists(tmp))
+                    {
+                        var tmp1 = File.ReadAllText(tmp);
+                        HistoryDisplayTextBox.Text = tmp1;
+                    }
+                    break;
+                case 2:
+                    DeleteHistoryButton.Visible = true;
+                    string SelectedFile1 = HistoryDisplayContent.GetItemText(HistoryDisplayContent.Text);
+                    //string tmp2 = @"D:\\Project\\CS511\\ShoppingOnlineApp\\Resources\\Hóa đơn\\" + SelectedFile1;
+                    //if (File.Exists(tmp2))
+                    //{
+                    //    string tmpPath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\CancelRecord.txt";
+                    //    File.AppendAllText(tmpPath, SelectedFile1);
+                    //    File.Delete(tmp2);
+                    //}
+                    //var tmpFile2 = File.ReadAllText(tmp2);
+                    //HistoryDisplayContent.Items.Clear();
+                    //HistoryDisplayContent.Items.AddRange(File.ReadAllLines("D:\\Project\\CS511\\ShoppingOnlineApp\\Resources\\Hóa đơn\\Mã hóa đơn.txt"));
+                    break;
+            }
+        }
+
+        private void HistoryButton_Click(object sender, EventArgs e)
+        {
+            HistoryFlag = 1;
+            SecondHistoryPanel.Visible = false;
+            DeleteHistoryButton.Visible = false;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            HistoryFlag = 2;
+            SecondHistoryPanel.Visible = false;
+            DeleteHistoryButton.Visible = true;
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            DeleteHistoryButton.Visible = false;
+            HistoryDisplayTextBox.Text = String.Empty;
+            SecondHistoryPanel.Visible = true;
+            var tmp3 = File.ReadAllText("D:\\Project\\CS511\\ShoppingOnlineApp\\Resources\\ViewFileRecord.txt");
+            SecondHistoryTextBox.Text = tmp3;
+            MessageBox.Show(tmp3);
+        }
+
+        private void HistorySeconExitButton_Click(object sender, EventArgs e)
+        {
+            SecondHistoryPanel.Visible=false;
+        }
+
+        private void DeleteHistoryButton_Click(object sender, EventArgs e)
+        {
+            string MaHoaDonpath = @"D:\\Project\\CS511\\ShoppingOnlineApp\\Resources\\Hóa đơn\\Mã hóa đơn.txt";
+            string SelectedFile1 = HistoryDisplayContent.GetItemText(HistoryDisplayContent.Text);
+            string tmp2 = @"D:\\Project\\CS511\\ShoppingOnlineApp\\Resources\\Hóa đơn\\" + SelectedFile1;
+            if (File.Exists(tmp2))
+            {
+                CustomDeleteLineFromTextFile(MaHoaDonpath, SelectedFile1);
+                string tmpPath = @"D:\Project\CS511\ShoppingOnlineApp\Resources\CancelRecord.txt";
+                File.AppendAllText(tmpPath, SelectedFile1 + "\n");
+                File.Delete(tmp2);
+                HistoryDisplayContent.Items.Clear();
+                HistoryDisplayContent.Items.AddRange(File.ReadAllLines("D:\\Project\\CS511\\ShoppingOnlineApp\\Resources\\Hóa đơn\\Mã hóa đơn.txt"));
+                var a = File.ReadAllText(@"D:\Project\CS511\ShoppingOnlineApp\Resources\CancelRecord.txt");
+                MessageBox.Show(a);
+            }
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Shop));
             this.LNButton = new System.Windows.Forms.Button();
             this.KNSButton = new System.Windows.Forms.Button();
             this.TTButton = new System.Windows.Forms.Button();
@@ -71,7 +72,7 @@
             this.ItemDisplayPictureBox = new System.Windows.Forms.PictureBox();
             this.ItemReturnButton = new System.Windows.Forms.Button();
             this.ShoppingCartButton = new System.Windows.Forms.Button();
-            this.MoneyFinishButton = new System.Windows.Forms.Button();
+            this.HistoryViewButton = new System.Windows.Forms.Button();
             this.CartPanel = new System.Windows.Forms.Panel();
             this.DeleteCartItemButton = new System.Windows.Forms.Button();
             this.ContinueCartButton = new System.Windows.Forms.Button();
@@ -80,14 +81,23 @@
             this.CartExitButton = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
             this.FillFormAndPayMoneyPanel = new System.Windows.Forms.Panel();
+            this.PayingMoneyButton = new System.Windows.Forms.Button();
+            this.MoneyReturnButton = new System.Windows.Forms.Button();
             this.MoneyTextBox = new System.Windows.Forms.TextBox();
             this.ItemIDTextBox = new System.Windows.Forms.TextBox();
             this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.PhoneTextBox = new System.Windows.Forms.TextBox();
             this.AddressTextBox = new System.Windows.Forms.TextBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.MoneyReturnButton = new System.Windows.Forms.Button();
-            this.PayingMoneyButton = new System.Windows.Forms.Button();
+            this.AccountPanel = new System.Windows.Forms.Panel();
+            this.DeleteHistoryButton = new System.Windows.Forms.Button();
+            this.SecondHistoryPanel = new System.Windows.Forms.Panel();
+            this.SecondHistoryTextBox = new System.Windows.Forms.TextBox();
+            this.HistoryDisplayTextBox = new System.Windows.Forms.TextBox();
+            this.HistoryDisplayContent = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.HistoryButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -103,6 +113,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemDisplayPictureBox)).BeginInit();
             this.CartPanel.SuspendLayout();
             this.FillFormAndPayMoneyPanel.SuspendLayout();
+            this.AccountPanel.SuspendLayout();
+            this.SecondHistoryPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LNButton
@@ -584,15 +596,16 @@
             this.ShoppingCartButton.UseVisualStyleBackColor = true;
             this.ShoppingCartButton.Click += new System.EventHandler(this.ShoppingCartButton_Click);
             // 
-            // MoneyFinishButton
+            // HistoryViewButton
             // 
-            this.MoneyFinishButton.BackgroundImage = global::ShoppingOnlineApp.Properties.Resources.Money;
-            this.MoneyFinishButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MoneyFinishButton.Location = new System.Drawing.Point(1314, 134);
-            this.MoneyFinishButton.Name = "MoneyFinishButton";
-            this.MoneyFinishButton.Size = new System.Drawing.Size(47, 40);
-            this.MoneyFinishButton.TabIndex = 33;
-            this.MoneyFinishButton.UseVisualStyleBackColor = true;
+            this.HistoryViewButton.BackgroundImage = global::ShoppingOnlineApp.Properties.Resources._352426_history_icon;
+            this.HistoryViewButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.HistoryViewButton.Location = new System.Drawing.Point(1314, 134);
+            this.HistoryViewButton.Name = "HistoryViewButton";
+            this.HistoryViewButton.Size = new System.Drawing.Size(47, 40);
+            this.HistoryViewButton.TabIndex = 33;
+            this.HistoryViewButton.UseVisualStyleBackColor = true;
+            this.HistoryViewButton.Click += new System.EventHandler(this.MoneyFinishButton_Click);
             // 
             // CartPanel
             // 
@@ -693,6 +706,26 @@
             this.FillFormAndPayMoneyPanel.TabIndex = 36;
             this.FillFormAndPayMoneyPanel.Visible = false;
             // 
+            // PayingMoneyButton
+            // 
+            this.PayingMoneyButton.Location = new System.Drawing.Point(757, 446);
+            this.PayingMoneyButton.Name = "PayingMoneyButton";
+            this.PayingMoneyButton.Size = new System.Drawing.Size(149, 53);
+            this.PayingMoneyButton.TabIndex = 43;
+            this.PayingMoneyButton.Text = "Thanh toán";
+            this.PayingMoneyButton.UseVisualStyleBackColor = true;
+            this.PayingMoneyButton.Click += new System.EventHandler(this.PayingMoneyButton_Click);
+            // 
+            // MoneyReturnButton
+            // 
+            this.MoneyReturnButton.Location = new System.Drawing.Point(492, 451);
+            this.MoneyReturnButton.Name = "MoneyReturnButton";
+            this.MoneyReturnButton.Size = new System.Drawing.Size(154, 48);
+            this.MoneyReturnButton.TabIndex = 42;
+            this.MoneyReturnButton.Text = "Quay lại";
+            this.MoneyReturnButton.UseVisualStyleBackColor = true;
+            this.MoneyReturnButton.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MoneyTextBox
             // 
             this.MoneyTextBox.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -743,25 +776,105 @@
             this.NameTextBox.Size = new System.Drawing.Size(571, 35);
             this.NameTextBox.TabIndex = 0;
             // 
-            // MoneyReturnButton
+            // AccountPanel
             // 
-            this.MoneyReturnButton.Location = new System.Drawing.Point(492, 451);
-            this.MoneyReturnButton.Name = "MoneyReturnButton";
-            this.MoneyReturnButton.Size = new System.Drawing.Size(154, 48);
-            this.MoneyReturnButton.TabIndex = 42;
-            this.MoneyReturnButton.Text = "Quay lại";
-            this.MoneyReturnButton.UseVisualStyleBackColor = true;
-            this.MoneyReturnButton.Click += new System.EventHandler(this.button1_Click);
+            this.AccountPanel.BackgroundImage = global::ShoppingOnlineApp.Properties.Resources.clone;
+            this.AccountPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AccountPanel.Controls.Add(this.DeleteHistoryButton);
+            this.AccountPanel.Controls.Add(this.SecondHistoryPanel);
+            this.AccountPanel.Controls.Add(this.HistoryDisplayTextBox);
+            this.AccountPanel.Controls.Add(this.HistoryDisplayContent);
+            this.AccountPanel.Controls.Add(this.button3);
+            this.AccountPanel.Controls.Add(this.button2);
+            this.AccountPanel.Controls.Add(this.HistoryButton);
+            this.AccountPanel.Location = new System.Drawing.Point(0, 180);
+            this.AccountPanel.Name = "AccountPanel";
+            this.AccountPanel.Size = new System.Drawing.Size(1371, 522);
+            this.AccountPanel.TabIndex = 37;
+            this.AccountPanel.Visible = false;
             // 
-            // PayingMoneyButton
+            // DeleteHistoryButton
             // 
-            this.PayingMoneyButton.Location = new System.Drawing.Point(757, 446);
-            this.PayingMoneyButton.Name = "PayingMoneyButton";
-            this.PayingMoneyButton.Size = new System.Drawing.Size(149, 53);
-            this.PayingMoneyButton.TabIndex = 43;
-            this.PayingMoneyButton.Text = "Thanh toán";
-            this.PayingMoneyButton.UseVisualStyleBackColor = true;
-            this.PayingMoneyButton.Click += new System.EventHandler(this.PayingMoneyButton_Click);
+            this.DeleteHistoryButton.BackColor = System.Drawing.Color.Lime;
+            this.DeleteHistoryButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DeleteHistoryButton.ForeColor = System.Drawing.Color.Red;
+            this.DeleteHistoryButton.Location = new System.Drawing.Point(326, 83);
+            this.DeleteHistoryButton.Name = "DeleteHistoryButton";
+            this.DeleteHistoryButton.Size = new System.Drawing.Size(112, 34);
+            this.DeleteHistoryButton.TabIndex = 6;
+            this.DeleteHistoryButton.Text = "Delete";
+            this.DeleteHistoryButton.UseVisualStyleBackColor = false;
+            this.DeleteHistoryButton.Visible = false;
+            this.DeleteHistoryButton.Click += new System.EventHandler(this.DeleteHistoryButton_Click);
+            // 
+            // SecondHistoryPanel
+            // 
+            this.SecondHistoryPanel.Controls.Add(this.SecondHistoryTextBox);
+            this.SecondHistoryPanel.Location = new System.Drawing.Point(277, 3);
+            this.SecondHistoryPanel.Name = "SecondHistoryPanel";
+            this.SecondHistoryPanel.Size = new System.Drawing.Size(1094, 516);
+            this.SecondHistoryPanel.TabIndex = 5;
+            this.SecondHistoryPanel.Visible = false;
+            // 
+            // SecondHistoryTextBox
+            // 
+            this.SecondHistoryTextBox.Location = new System.Drawing.Point(0, 0);
+            this.SecondHistoryTextBox.Multiline = true;
+            this.SecondHistoryTextBox.Name = "SecondHistoryTextBox";
+            this.SecondHistoryTextBox.ReadOnly = true;
+            this.SecondHistoryTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.SecondHistoryTextBox.Size = new System.Drawing.Size(1353, 513);
+            this.SecondHistoryTextBox.TabIndex = 0;
+            // 
+            // HistoryDisplayTextBox
+            // 
+            this.HistoryDisplayTextBox.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HistoryDisplayTextBox.Location = new System.Drawing.Point(492, 2);
+            this.HistoryDisplayTextBox.Multiline = true;
+            this.HistoryDisplayTextBox.Name = "HistoryDisplayTextBox";
+            this.HistoryDisplayTextBox.ReadOnly = true;
+            this.HistoryDisplayTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.HistoryDisplayTextBox.Size = new System.Drawing.Size(879, 520);
+            this.HistoryDisplayTextBox.TabIndex = 4;
+            // 
+            // HistoryDisplayContent
+            // 
+            this.HistoryDisplayContent.FormattingEnabled = true;
+            this.HistoryDisplayContent.Location = new System.Drawing.Point(289, 22);
+            this.HistoryDisplayContent.Name = "HistoryDisplayContent";
+            this.HistoryDisplayContent.Size = new System.Drawing.Size(182, 33);
+            this.HistoryDisplayContent.TabIndex = 3;
+            this.HistoryDisplayContent.SelectedIndexChanged += new System.EventHandler(this.HistoryDisplayContent_SelectedIndexChanged);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(0, 222);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(271, 114);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Danh sách các sản phẩm đã xem";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 114);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(271, 114);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Danh sách đơn hàng đã hủy";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // HistoryButton
+            // 
+            this.HistoryButton.Location = new System.Drawing.Point(3, -1);
+            this.HistoryButton.Name = "HistoryButton";
+            this.HistoryButton.Size = new System.Drawing.Size(271, 114);
+            this.HistoryButton.TabIndex = 0;
+            this.HistoryButton.Text = "Lịch sử đơn hàng đã đặt";
+            this.HistoryButton.UseVisualStyleBackColor = true;
+            this.HistoryButton.Click += new System.EventHandler(this.HistoryButton_Click);
             // 
             // Shop
             // 
@@ -770,10 +883,11 @@
             this.BackgroundImage = global::ShoppingOnlineApp.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1369, 703);
+            this.Controls.Add(this.AccountPanel);
             this.Controls.Add(this.FillFormAndPayMoneyPanel);
             this.Controls.Add(this.HomeButton);
             this.Controls.Add(this.CartPanel);
-            this.Controls.Add(this.MoneyFinishButton);
+            this.Controls.Add(this.HistoryViewButton);
             this.Controls.Add(this.ShoppingCartButton);
             this.Controls.Add(this.ItemDisplayPanel);
             this.Controls.Add(this.title20);
@@ -809,6 +923,7 @@
             this.Controls.Add(this.TTButton);
             this.Controls.Add(this.KNSButton);
             this.Controls.Add(this.LNButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Shop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bookstore Shopping App";
@@ -830,6 +945,10 @@
             this.CartPanel.PerformLayout();
             this.FillFormAndPayMoneyPanel.ResumeLayout(false);
             this.FillFormAndPayMoneyPanel.PerformLayout();
+            this.AccountPanel.ResumeLayout(false);
+            this.AccountPanel.PerformLayout();
+            this.SecondHistoryPanel.ResumeLayout(false);
+            this.SecondHistoryPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -880,7 +999,7 @@
         private Label label1;
         private Button BuyButton;
         private Button ShoppingCartButton;
-        private Button MoneyFinishButton;
+        private Button HistoryViewButton;
         private Panel CartPanel;
         private Button HomeButton;
         private Button CartExitButton;
@@ -897,5 +1016,14 @@
         private TextBox NameTextBox;
         private Button PayingMoneyButton;
         private Button MoneyReturnButton;
+        private Panel AccountPanel;
+        private TextBox HistoryDisplayTextBox;
+        private ComboBox HistoryDisplayContent;
+        private Button button3;
+        private Button button2;
+        private Button HistoryButton;
+        private Panel SecondHistoryPanel;
+        private TextBox SecondHistoryTextBox;
+        private Button DeleteHistoryButton;
     }
 }
